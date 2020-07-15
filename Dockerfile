@@ -9,7 +9,7 @@ RUN apk add --no-cache --virtual .build-deps \
     g++ \
     libgcc \
     lld \
-    llvm10 \
+    llvm10-dev \
     make \
     musl-dev \
     openssl \
