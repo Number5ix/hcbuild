@@ -10,6 +10,7 @@ RUN apk add --no-cache --virtual .build-deps \
     make \
     openssl \
     git
+RUN ln -s /usr/bin/ld.lld /usr/bin/ld
 
 ENV CMAKE_CXX_COMPILER=clang++
 ENV CMAKE_C_COMPILER=clang
