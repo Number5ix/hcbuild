@@ -5,6 +5,7 @@ RUN apk add --no-cache --virtual .build-deps \
     bash \
     clang \
     cmake \
+    make \
     openssl \
     git
 
