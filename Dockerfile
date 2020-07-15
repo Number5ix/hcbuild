@@ -13,3 +13,4 @@ RUN apk add --no-cache --virtual .build-deps \
 ENV CMAKE_CXX_COMPILER=clang++
 ENV CMAKE_C_COMPILER=clang
 ENV CMAKE_LINKER=lld
+ENV LD=lld
