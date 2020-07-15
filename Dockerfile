@@ -5,6 +5,7 @@ RUN apk add --no-cache --virtual .build-deps \
     bash \
     clang \
     cmake \
+    libgcc \
     lld \
     llvm10 \
     make \
