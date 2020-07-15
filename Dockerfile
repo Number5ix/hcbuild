@@ -4,7 +4,7 @@ FROM $distro:$release
 MAINTAINER Number Six <59003907+Number5ix@users.noreply.github.com>
 
 RUN apt-get update \
-  && apt-get install -y software-properties-common \
+  && env DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common \
   ca-certificates \
   build-essential \
   clang \
