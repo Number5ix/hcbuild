@@ -5,13 +5,15 @@ RUN apk add --no-cache --virtual .build-deps \
     bash \
     clang \
     cmake \
+    gcc \
+    g++ \
     libgcc \
     lld \
-    llvm10 \
     make \
+    musl-dev \
     openssl \
     git
-RUN ln -s /usr/bin/ld.lld /usr/bin/ld
+RUN ln -sf /usr/bin/ld.lld /usr/bin/ld
 
 ENV CMAKE_CXX_COMPILER=clang++
 ENV CMAKE_C_COMPILER=clang
