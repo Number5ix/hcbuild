@@ -15,6 +15,10 @@ RUN apk add --no-cache --virtual .build-deps \
     git
 RUN ln -sf /usr/bin/ld.lld /usr/bin/ld
 
+ENV CC=clang
+ENV CXX=clang++
+ENV LD=ld.lld
+
 ENV CMAKE_CXX_COMPILER=clang++
 ENV CMAKE_C_COMPILER=clang
 ENV CMAKE_AR=/usr/bin/llvm-ar
