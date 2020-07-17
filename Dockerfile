@@ -2,6 +2,7 @@ FROM alpine:3.12
 MAINTAINER Number Six <59003907+Number5ix@users.noreply.github.com>
 
 RUN apk add --no-cache --virtual .build-deps \
+    aws-cli \
     bash \
     clang \
     cmake \
