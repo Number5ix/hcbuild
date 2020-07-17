@@ -1,8 +1,8 @@
 FROM alpine:3.12
 MAINTAINER Number Six <59003907+Number5ix@users.noreply.github.com>
 
+RUN echo '@edge http://dl-cdn.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories
 RUN apk add --no-cache --virtual .build-deps \
-    aws-cli \
     bash \
     clang \
     cmake \
@@ -12,6 +12,7 @@ RUN apk add --no-cache --virtual .build-deps \
     lld \
     llvm10-dev \
     make \
+    minio-client@edge \
     musl-dev \
     openssl \
     git \
