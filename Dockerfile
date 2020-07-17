@@ -2,6 +2,7 @@ FROM alpine:3.12
 MAINTAINER Number Six <59003907+Number5ix@users.noreply.github.com>
 
 RUN echo '@edge http://dl-cdn.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories
+RUN apk update
 RUN apk add --no-cache --virtual .build-deps \
     bash \
     clang \
