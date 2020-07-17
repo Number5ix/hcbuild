@@ -13,8 +13,11 @@ RUN apk add --no-cache --virtual .build-deps \
     make \
     musl-dev \
     openssl \
-    git
+    git \
+    nodejs \
+    npm
 RUN ln -sf /usr/bin/ld.lld /usr/bin/ld
+RUN npm i -g luamin
 
 ENV CC=clang
 ENV CXX=clang++
