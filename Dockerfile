@@ -2,7 +2,7 @@ FROM alpine:3.12
 MAINTAINER Number Six <59003907+Number5ix@users.noreply.github.com>
 
 RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
-    apk add --no-cache --virtual .build-deps \
+    apk add --no-cache \
     bash \
     clang \
     cmake \
