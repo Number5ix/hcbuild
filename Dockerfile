@@ -1,8 +1,8 @@
 FROM alpine:3.12
 MAINTAINER Number Six <59003907+Number5ix@users.noreply.github.com>
 
-RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
-RUN apk add --no-cache --virtual .build-deps \
+RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
+    apk add --no-cache --virtual .build-deps \
     bash \
     clang \
     cmake \
@@ -17,18 +17,17 @@ RUN apk add --no-cache --virtual .build-deps \
     openssl \
     git \
     nodejs \
-    npm
-RUN ln -sf /usr/bin/ld.lld /usr/bin/ld
-RUN npm i -g luamin
+    npm && \
+    ln -sf /usr/bin/ld.lld /usr/bin/ld && \
+    npm i -g luamin
 
 ENV CC=clang
-ENV CXX=clang++
-ENV LD=ld.lld
-
-ENV CMAKE_CXX_COMPILER=clang++
-ENV CMAKE_C_COMPILER=clang
-ENV CMAKE_AR=/usr/bin/llvm-ar
-ENV CMAKE_LINKER=/usr/bin/ld.lld
-ENV CMAKE_NM=/usr/bin/llvm-nm
-ENV CMAKE_OBJDUMP=/usr/bin/llvm-objdump
-ENV CMAKE_RANLIB=/usr/bin/llvm-ranlib
+    CXX=clang++
+    LD=ld.lld
+    CMAKE_CXX_COMPILER=clang++
+    CMAKE_C_COMPILER=clang
+    CMAKE_AR=/usr/bin/llvm-ar
+    CMAKE_LINKER=/usr/bin/ld.lld
+    CMAKE_NM=/usr/bin/llvm-nm
+    CMAKE_OBJDUMP=/usr/bin/llvm-objdump
+    CMAKE_RANLIB=/usr/bin/llvm-ranlib
