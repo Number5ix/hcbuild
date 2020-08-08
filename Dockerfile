@@ -16,6 +16,7 @@ RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /et
     musl-dev \
     openssh \
     openssl \
+    python3 \
     git \
     nodejs \
     npm \
