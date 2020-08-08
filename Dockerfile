@@ -18,6 +18,7 @@ RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /et
     git \
     nodejs \
     npm \
+    rsync \
     xz && \
     ln -sf /usr/bin/ld.lld /usr/bin/ld && \
     npm i -g luamin
