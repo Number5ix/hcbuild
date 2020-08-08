@@ -14,6 +14,7 @@ RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /et
     make \
     minio-client@edgetesting \
     musl-dev \
+    openssh \
     openssl \
     git \
     nodejs \
