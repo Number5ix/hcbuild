@@ -17,7 +17,8 @@ RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /et
     openssl \
     git \
     nodejs \
-    npm && \
+    npm \
+    xz && \
     ln -sf /usr/bin/ld.lld /usr/bin/ld && \
     npm i -g luamin
 
