@@ -20,6 +20,7 @@ RUN echo '@edgetesting http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /et
     git \
     nodejs \
     npm \
+    p7zip \
     rsync \
     xz && \
     ln -sf /usr/bin/ld.lld /usr/bin/ld && \
